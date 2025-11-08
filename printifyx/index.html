@@ -1,13 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>printifyx</title>
+    <title>PrintifyX Super Starter</title>
+
+    <link rel="stylesheet" href="/output.css" />
+    <style>
+      html,
+      body {
+        background-color: #1f2937;
+        color: white;
+        min-height: 100vh;
+      }
+    </style>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="center-screen">
+    <div class="page-container">
+      <h1 class="text-6xl font-bold mb-6 text-gradient">PrintifyX</h1>
+
+      <button id="btn" class="btn-primary mb-4">Click Me</button>
+      <button id="openModal" class="btn-primary mb-4">Open Modal</button>
+
+      <input
+        id="userInput"
+        class="input-field"
+        type="text"
+        placeholder="Type something..."
+      />
+
+      <div class="card">
+        <h2 class="text-xl font-semibold mb-2">Welcome to PrintifyX</h2>
+        <p>Start building your printing app instantly!</p>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="modal hidden bg-black/50 fixed inset-0 flex items-center justify-center"
+    >
+      <div class="card">
+        <h2 class="text-xl font-semibold mb-2">Your Input:</h2>
+        <p id="modalContent" class="mb-4"></p>
+        <button id="closeModal" class="btn-primary mt-4">Close</button>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -1,24 +1,24 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+const modal = document.getElementById('modal');
+const openModal = document.getElementById('openModal');
+const closeModal = document.getElementById('closeModal');
+const modalContent = document.getElementById('modalContent');
+const userInput = document.getElementById('userInput');
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+// Open modal and show input
+openModal.addEventListener('click', () => {
+  const inputText = userInput.value.trim();
+  if (inputText === '') {
+    modalContent.textContent = "You didn't type anything!";
+  } else {
+    modalContent.textContent = inputText;
+  }
+  modal.classList.remove('hidden');
+});
+closeModal.addEventListener('click', () => modal.classList.add('hidden')); // hide modal
 
-setupCounter(document.querySelector('#counter'))
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) modal.classList.add('hidden');
+});
+btn.addEventListener('click', () => {
+  alert('PrintifyX Super Starter is ready!');
+});

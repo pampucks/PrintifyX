@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+
+/* Layout Components */
+@layer components {
+  .center-screen {
+    @apply flex flex-col items-center justify-center min-h-screen;
+  }
+  .page-container {
+    @apply max-w-5xl mx-auto p-6;
+  }
+}
+
+/* UI Components */
+@layer components {
+  .btn-primary {
+    /* @apply bg-[#1d4ed8] hover:bg-[#f59e0b] text-white px-6 py-3 rounded-xl font-bold focus:outline-none focus:ring-4 focus:ring-[#1d4ed8]; */
+    @apply bg-[#1d4ed8] text-white px-6 py-3 rounded-xl font-bold 
+           hover:bg-[#f59e0b] cursor-pointer transition duration-300;
+  }
+
+  .card {
+    @apply bg-gray-800 dark:bg-gray-900 text-white p-6 rounded-2xl shadow-lg mb-6;
+  }
+
+  .input-field {
+    @apply bg-gray-700 dark:bg-gray-800 text-white p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-[#1d4ed8] mb-4;
+  }
+
+  .modal {
+    @apply fixed inset-0 flex items-center justify-center bg-black bg-black/50 hidden;
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(to right, #1d4ed8, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .shadow-brand {
+    box-shadow: 0 4px 15px rgba(29, 78, 216, 0.5);
+  }
+}
